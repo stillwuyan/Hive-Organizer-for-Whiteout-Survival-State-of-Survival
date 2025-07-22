@@ -135,7 +135,7 @@ def showAssignment(event, canvas, tag=None):
         coords[1] = min(list(map(lambda x:coords[x], range(1,len(coords),2))))
         # the width of '0' is only a placeholder.
         # it is made to fit the text below
-        coords_rec = [coords[0], coords[1]-20, coords[0], coords[1]]
+        coords_rec = [coords[0], coords[1]-21, coords[0], coords[1]-1]
 
         # Create box for hover text
         canvas.showMember = [canvas.create_rectangle(*coords_rec,fill='#FCE69a')]
