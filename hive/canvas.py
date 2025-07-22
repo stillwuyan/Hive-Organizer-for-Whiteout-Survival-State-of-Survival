@@ -252,6 +252,10 @@ def eraseBlock(canvas):
     blocks_to_erase = canvas.find_withtag('erase')
     for block in blocks_to_erase:
         canvas.removeBuilding(block)
+        try:
+            canvas.delete(*canvas.showMember)
+        except TypeError:
+            pass
     #No block selected
     canvas.new_block = None
 
