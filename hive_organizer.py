@@ -1415,5 +1415,6 @@ def make_png(widget, toplevel):
     toplevel.attributes('-topmost',False)
 
 MW = MainWindow()
+MW.protocol("WM_DELETE_WINDOW", lambda : MW.quitDialog())
 MW.mainloop()
 MW.destroy()
